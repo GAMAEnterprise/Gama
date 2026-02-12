@@ -3,140 +3,144 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GAMA | Infraestructura Tecnológica</title>
+<title>GAMA | Cableado Estructurado Profesional</title>
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+*{margin:0;padding:0;box-sizing:border-box;}
 
-body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: #f4f6f9;
-    color: #333;
+body{
+    font-family:'Segoe UI', Arial, sans-serif;
+    background:#f4f6f9;
+    color:#333;
 }
 
 /* ===== NAVBAR ===== */
-header {
-    position: fixed;
-    width: 100%;
-    background: #0b3c5d;
-    padding: 15px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
+header{
+    position:fixed;
+    width:100%;
+    background:#0b3c5d;
+    padding:15px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
 }
 
 .logo img{
-    height:50px;
+    height:80px;
+}
+header nav a{
+    color:#fff;
+    text-decoration:none;
+    margin-left:25px;
+    font-weight:500;
 }
 
-
-header nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 25px;
-    font-weight: 500;
-}
-
-header nav a:hover {
-    opacity: 0.7;
-}
+header nav a:hover{opacity:0.7;}
 
 /* ===== HERO ===== */
-.hero {
-    height: 100vh;
-    background: linear-gradient(rgba(11,60,93,0.85), rgba(11,60,93,0.85)),
-    url('https://images.unsplash.com/photo-1581093588401-22b5ad2e1c07');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
+.hero{
+    height:100vh;
+    background:linear-gradient(rgba(11,60,93,0.9), rgba(11,60,93,0.9)),
+    url('https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0');
+    background-size:cover;
+    background-position:center;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:20px;
 }
 
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
+.hero h1{font-size:48px;margin-bottom:20px;}
+.hero p{font-size:20px;max-width:800px;margin:auto;}
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:14px 30px;
+    background:#fff;
+    color:#0b3c5d;
+    font-weight:bold;
+    text-decoration:none;
+    border-radius:6px;
+    transition:0.3s;
 }
 
-.hero p {
-    font-size: 20px;
-    max-width: 800px;
-    margin: auto;
-}
-
-.btn {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 14px 30px;
-    background: #ffffff;
-    color: #0b3c5d;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 6px;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: #dfe8ef;
-}
+.btn:hover{background:#dfe8ef;}
 
 /* ===== SECTIONS ===== */
-section {
-    padding: 100px 10%;
+section{padding:100px 10%;}
+
+section h2{
+    text-align:center;
+    margin-bottom:60px;
+    color:#0b3c5d;
+    font-size:32px;
 }
 
-section h2 {
-    text-align: center;
-    margin-bottom: 60px;
-    color: #0b3c5d;
-    font-size: 32px;
+/* ===== GRID ===== */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
 }
 
-/* ===== CARDS ===== */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+.card{
+    background:#fff;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.3s;
 }
 
-.card {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    transition: 0.3s;
+.card:hover{transform:translateY(-6px);}
+
+.card h3{
+    margin-bottom:15px;
+    color:#1d5c82;
 }
 
-.card:hover {
-    transform: translateY(-5px);
+/* ===== COSTO BENEFICIO TABLE ===== */
+.table-container{
+    overflow-x:auto;
+    margin-top:40px;
 }
 
-.card h3 {
-    margin-bottom: 15px;
-    color: #1d5c82;
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:#fff;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+th, td{
+    padding:18px;
+    text-align:center;
+}
+
+th{
+    background:#0b3c5d;
+    color:#fff;
+}
+
+tr:nth-child(even){
+    background:#f2f6fa;
 }
 
 /* ===== FOOTER ===== */
-footer {
-    background: #0b3c5d;
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
+footer{
+    background:#0b3c5d;
+    color:#fff;
+    text-align:center;
+    padding:40px 20px;
 }
 
-/* ===== RESPONSIVE ===== */
 @media(max-width:768px){
-    .hero h1{
-        font-size: 32px;
-    }
+    .hero h1{font-size:32px;}
 }
 </style>
 </head>
@@ -144,51 +148,43 @@ footer {
 <body>
 
 <header>
+
     <div class="logo">
         <img src="logo.png" alt="GAMA Logo">
     </div>
 
     <nav>
-        <a href="#nosotros">Cómo trabajamos</a>
+        <a href="#metodo">Metodología</a>
         <a href="#servicios">Servicios</a>
+        <a href="#beneficio">Costo-Beneficio</a>
         <a href="#contacto">Contacto</a>
     </nav>
 </header>
 
 <div class="hero">
     <div>
-        <h1>Infraestructura Tecnológica Estratégica</h1>
+        <h1>Cableado Estructurado Profesional</h1>
         <p>
-            Diseñamos, organizamos e implementamos sistemas tecnológicos
-            alineados al crecimiento real de tu empresa.
+            Infraestructura organizada, certificada y preparada para el crecimiento empresarial en México.
         </p>
-        <a href="#contacto" class="btn">Solicitar Evaluación</a>
+        <a href="#contacto" class="btn">Solicitar Evaluación Técnica</a>
     </div>
 </div>
 
-<section id="nosotros">
-    <h2>¿Cómo trabajamos en GAMA?</h2>
+<section id="metodo">
+    <h2>Nuestra Metodología</h2>
     <div class="grid">
         <div class="card">
-            <h3>Análisis Integral del Negocio</h3>
-            <p>
-                Estudiamos procesos, ritmos de trabajo y áreas críticas
-                para diseñar infraestructura alineada a la operación real.
-            </p>
+            <h3>Análisis Técnico</h3>
+            <p>Evaluamos espacios, canalizaciones y proyección de crecimiento bajo estándares técnicos.</p>
         </div>
         <div class="card">
-            <h3>Identificación de Prioridades</h3>
-            <p>
-                Evaluamos qué áreas requieren mayor rendimiento,
-                seguridad y estabilidad para optimizar recursos.
-            </p>
+            <h3>Diseño Bajo Normativa</h3>
+            <p>Planeación conforme a estándares TIA/EIA para garantizar rendimiento y compatibilidad.</p>
         </div>
         <div class="card">
-            <h3>Diseño Flexible y Escalable</h3>
-            <p>
-                Implementamos soluciones preparadas para crecimiento,
-                reorganización y nuevas tecnologías.
-            </p>
+            <h3>Escalabilidad</h3>
+            <p>Infraestructura organizada con racks, patch panels y etiquetado profesional.</p>
         </div>
     </div>
 </section>
@@ -197,49 +193,81 @@ footer {
     <h2>Servicios Especializados</h2>
     <div class="grid">
         <div class="card">
-            <h3>Infraestructura Tecnológica</h3>
-            <p>
-                Diseño, instalación y mantenimiento profesional
-                bajo estándares técnicos reconocidos.
-            </p>
+            <h3>Instalación Profesional</h3>
+            <p>Redes de datos, voz y video con organización estructurada.</p>
         </div>
         <div class="card">
-            <h3>Redes de Datos, Voz y Video</h3>
-            <p>
-                Implementación de sistemas robustos para comunicación
-                estable y segura.
-            </p>
+            <h3>Certificación y Pruebas</h3>
+            <p>Validación técnica para garantizar estabilidad y rendimiento.</p>
         </div>
         <div class="card">
-            <h3>Optimización y Seguridad</h3>
-            <p>
-                Mejora del rendimiento, orden físico y protección
-                de la información empresarial.
-            </p>
-        </div>
-        <div class="card">
-            <h3>Cableado Estructurado</h3>
-            <p>
-                Instalaciones certificadas, organizadas y documentadas
-                para máximo desempeño y durabilidad.
-            </p>
+            <h3>Mantenimiento</h3>
+            <p>Optimización y reorganización de infraestructura existente.</p>
         </div>
     </div>
 </section>
 
+<section id="beneficio">
+    <h2>Costo-Beneficio para Empresas en México</h2>
+
+    <p style="text-align:center; font-size:18px; max-width:900px; margin:auto;">
+        Aunque el cableado estructurado representa una inversión inicial mayor que soluciones improvisadas,
+        en el contexto empresarial mexicano genera ahorros significativos en mantenimiento,
+        reducción de fallas y mayor productividad operativa.
+        La correcta planeación disminuye tiempos de inactividad y evita rehacer instalaciones cada vez que la empresa crece.
+    </p>
+
+    <div class="table-container">
+        <table>
+            <tr>
+                <th>Aspecto</th>
+                <th>Instalación Improvisada</th>
+                <th>Cableado Estructurado GAMA</th>
+            </tr>
+            <tr>
+                <td>Inversión Inicial</td>
+                <td>Baja</td>
+                <td>Planificada y estratégica</td>
+            </tr>
+            <tr>
+                <td>Mantenimiento</td>
+                <td>Frecuente y costoso</td>
+                <td>Menor y controlado</td>
+            </tr>
+            <tr>
+                <td>Tiempo de Inactividad</td>
+                <td>Alto riesgo</td>
+                <td>Reducción significativa</td>
+            </tr>
+            <tr>
+                <td>Escalabilidad</td>
+                <td>Limitada</td>
+                <td>Preparada para crecimiento</td>
+            </tr>
+            <tr>
+                <td>Vida Útil</td>
+                <td>Corta</td>
+                <td>15–25 años según estándar</td>
+            </tr>
+        </table>
+    </div>
+
+    <p style="text-align:center; margin-top:40px; font-size:18px;">
+        En GAMA convertimos el cableado estructurado en una inversión inteligente,
+        no en un gasto operativo.
+    </p>
+
+</section>
+
 <section id="contacto">
-    <h2>Preparados para impulsar tu infraestructura</h2>
+    <h2>Infraestructura Ordenada. Comunicación Confiable.</h2>
     <div style="text-align:center;">
-        <p style="font-size:18px;">
-            Contáctanos para una evaluación profesional
-            y lleva tu infraestructura al siguiente nivel.
-        </p>
-        <a href="mailto:contacto@gama.com" class="btn" style="margin-top:25px;">Contactar Ahora</a>
+        <a href="mailto:contacto@gama.com" class="btn">Contactar a GAMA</a>
     </div>
 </section>
 
 <footer>
-    © 2026 GAMA – Infraestructura Tecnológica Profesional
+    © 2026 GAMA | Especialistas en Cableado Estructurado
 </footer>
 
 </body>
