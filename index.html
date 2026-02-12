@@ -10,15 +10,22 @@
 
 body{
     font-family:'Segoe UI', Arial, sans-serif;
-    background:#f4f6f9;
+    background:#f3f7f3;
     color:#333;
+}
+
+/* ===== COLOR PRINCIPAL VERDE CÉSPED ===== */
+:root{
+    --verde:#2e7d32;
+    --verde-oscuro:#1b5e20;
+    --verde-claro:#4caf50;
 }
 
 /* ===== NAVBAR ===== */
 header{
     position:fixed;
     width:100%;
-    background:#0b3c5d;
+    background:var(--verde-oscuro);
     padding:15px 50px;
     display:flex;
     justify-content:space-between;
@@ -29,6 +36,7 @@ header{
 .logo img{
     height:80px;
 }
+
 header nav a{
     color:#fff;
     text-decoration:none;
@@ -41,7 +49,7 @@ header nav a:hover{opacity:0.7;}
 /* ===== HERO ===== */
 .hero{
     height:100vh;
-    background:linear-gradient(rgba(11,60,93,0.9), rgba(11,60,93,0.9)),
+    background:linear-gradient(rgba(27,94,32,0.9), rgba(27,94,32,0.9)),
     url('https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0');
     background-size:cover;
     background-position:center;
@@ -61,14 +69,14 @@ header nav a:hover{opacity:0.7;}
     margin-top:30px;
     padding:14px 30px;
     background:#fff;
-    color:#0b3c5d;
+    color:var(--verde-oscuro);
     font-weight:bold;
     text-decoration:none;
     border-radius:6px;
     transition:0.3s;
 }
 
-.btn:hover{background:#dfe8ef;}
+.btn:hover{background:#dff0df;}
 
 /* ===== SECTIONS ===== */
 section{padding:100px 10%;}
@@ -76,7 +84,7 @@ section{padding:100px 10%;}
 section h2{
     text-align:center;
     margin-bottom:60px;
-    color:#0b3c5d;
+    color:var(--verde-oscuro);
     font-size:32px;
 }
 
@@ -99,10 +107,10 @@ section h2{
 
 .card h3{
     margin-bottom:15px;
-    color:#1d5c82;
+    color:var(--verde);
 }
 
-/* ===== COSTO BENEFICIO TABLE ===== */
+/* ===== TABLES ===== */
 .table-container{
     overflow-x:auto;
     margin-top:40px;
@@ -123,17 +131,17 @@ th, td{
 }
 
 th{
-    background:#0b3c5d;
+    background:var(--verde);
     color:#fff;
 }
 
 tr:nth-child(even){
-    background:#f2f6fa;
+    background:#eef7ee;
 }
 
 /* ===== FOOTER ===== */
 footer{
-    background:#0b3c5d;
+    background:var(--verde-oscuro);
     color:#fff;
     text-align:center;
     padding:40px 20px;
@@ -148,7 +156,6 @@ footer{
 <body>
 
 <header>
-
     <div class="logo">
         <img src="logo1.png" alt="GAMA Logo">
     </div>
@@ -157,6 +164,7 @@ footer{
         <a href="#metodo">Metodología</a>
         <a href="#servicios">Servicios</a>
         <a href="#beneficio">Costo-Beneficio</a>
+        <a href="#costos">Costos</a>
         <a href="#contacto">Contacto</a>
     </nav>
 </header>
@@ -165,7 +173,8 @@ footer{
     <div>
         <h1>Cableado Estructurado Profesional</h1>
         <p>
-            Infraestructura organizada, certificada y preparada para el crecimiento empresarial en México.
+            Infraestructura tecnológica organizada, certificada y preparada
+            para el crecimiento empresarial en México.
         </p>
         <a href="#contacto" class="btn">Solicitar Evaluación Técnica</a>
     </div>
@@ -176,45 +185,44 @@ footer{
     <div class="grid">
         <div class="card">
             <h3>Análisis Técnico</h3>
-            <p>Evaluamos espacios, canalizaciones y proyección de crecimiento bajo estándares técnicos.</p>
+            <p>Evaluación de espacios, canalizaciones y necesidades actuales y futuras bajo normativa TIA/EIA.</p>
         </div>
         <div class="card">
-            <h3>Diseño Bajo Normativa</h3>
-            <p>Planeación conforme a estándares TIA/EIA para garantizar rendimiento y compatibilidad.</p>
+            <h3>Diseño Profesional</h3>
+            <p>Planeación estructurada con racks, patch panels, etiquetado y organización certificada.</p>
         </div>
         <div class="card">
             <h3>Escalabilidad</h3>
-            <p>Infraestructura organizada con racks, patch panels y etiquetado profesional.</p>
+            <p>Infraestructura preparada para crecer sin rehacer instalaciones.</p>
         </div>
     </div>
 </section>
 
-<section id="servicios" style="background:#eef3f7;">
+<section id="servicios" style="background:#e8f5e9;">
     <h2>Servicios Especializados</h2>
     <div class="grid">
         <div class="card">
-            <h3>Instalación Profesional</h3>
-            <p>Redes de datos, voz y video con organización estructurada.</p>
+            <h3>Instalación de Redes</h3>
+            <p>Implementación profesional de redes de datos, voz y video.</p>
         </div>
         <div class="card">
-            <h3>Certificación y Pruebas</h3>
-            <p>Validación técnica para garantizar estabilidad y rendimiento.</p>
+            <h3>Certificación</h3>
+            <p>Pruebas técnicas para garantizar rendimiento y estabilidad.</p>
         </div>
         <div class="card">
             <h3>Mantenimiento</h3>
-            <p>Optimización y reorganización de infraestructura existente.</p>
+            <p>Optimización, reorganización y mejora del rendimiento de infraestructura existente.</p>
         </div>
     </div>
 </section>
 
 <section id="beneficio">
-    <h2>Costo-Beneficio para Empresas en México</h2>
+    <h2>Costo-Beneficio </h2>
 
     <p style="text-align:center; font-size:18px; max-width:900px; margin:auto;">
-        Aunque el cableado estructurado representa una inversión inicial mayor que soluciones improvisadas,
-        en el contexto empresarial mexicano genera ahorros significativos en mantenimiento,
-        reducción de fallas y mayor productividad operativa.
-        La correcta planeación disminuye tiempos de inactividad y evita rehacer instalaciones cada vez que la empresa crece.
+        El cableado estructurado representa una inversión estratégica.
+        Reduce tiempos de inactividad, minimiza fallas y disminuye costos
+        de mantenimiento a largo plazo.
     </p>
 
     <div class="table-container">
@@ -222,41 +230,63 @@ footer{
             <tr>
                 <th>Aspecto</th>
                 <th>Instalación Improvisada</th>
-                <th>Cableado Estructurado GAMA</th>
-            </tr>
-            <tr>
-                <td>Inversión Inicial</td>
-                <td>Baja</td>
-                <td>Planificada y estratégica</td>
+                <th>GAMA</th>
             </tr>
             <tr>
                 <td>Mantenimiento</td>
-                <td>Frecuente y costoso</td>
-                <td>Menor y controlado</td>
-            </tr>
-            <tr>
-                <td>Tiempo de Inactividad</td>
-                <td>Alto riesgo</td>
-                <td>Reducción significativa</td>
+                <td>Frecuente</td>
+                <td>Controlado</td>
             </tr>
             <tr>
                 <td>Escalabilidad</td>
                 <td>Limitada</td>
-                <td>Preparada para crecimiento</td>
+                <td>Preparada</td>
             </tr>
             <tr>
-                <td>Vida Útil</td>
-                <td>Corta</td>
-                <td>15–25 años según estándar</td>
+                <td>Vida útil</td>
+                <td>5-8 años</td>
+                <td>15-25 años</td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+<section id="costos" style="background:#f1f8f2;">
+    <h2>Costos Generales Estimados en México</h2>
+
+    <div class="table-container">
+        <table>
+            <tr>
+                <th>Concepto</th>
+                <th>Unidad</th>
+                <th>Rango Aproximado (MXN)</th>
+            </tr>
+            <tr>
+                <td>Nodo Cat 5e</td>
+                <td>Por punto</td>
+                <td>$600 – $900</td>
+            </tr>
+            <tr>
+                <td>Nodo Cat 6</td>
+                <td>Por punto</td>
+                <td>$900 – $1,800</td>
+            </tr>
+            <tr>
+                <td>Nodo Cat 6 Certificado</td>
+                <td>Por punto</td>
+                <td>$1,200 – $3,800</td>
+            </tr>
+            <tr>
+                <td>Cat 6A alto rendimiento</td>
+                <td>Por punto</td>
+                <td>$1,400 – $2,500+</td>
             </tr>
         </table>
     </div>
 
-    <p style="text-align:center; margin-top:40px; font-size:18px;">
-        En GAMA convertimos el cableado estructurado en una inversión inteligente,
-        no en un gasto operativo.
+    <p style="text-align:center; margin-top:30px;">
+        Los costos pueden variar según ubicación, volumen del proyecto y condiciones técnicas.
     </p>
-
 </section>
 
 <section id="contacto">
