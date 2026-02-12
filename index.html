@@ -1,216 +1,243 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>GAMA | Infraestructura Tecnológica</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GAMA | Infraestructura Tecnológica</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: linear-gradient(135deg, #0b3c5d, #1d5c82);
-            color: #333;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        .wrapper {
-            max-width: 1100px;
-            margin: auto;
-            padding: 40px 20px;
-        }
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+}
 
-        .card {
-            background: #ffffff;
-            padding: 50px;
-            border-radius: 12px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-        }
+/* ===== NAVBAR ===== */
+header {
+    position: fixed;
+    width: 100%;
+    background: #0b3c5d;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
 
-        h1 {
-            text-align: center;
-            color: #0b3c5d;
-            font-size: 36px;
-            margin-bottom: 10px;
-        }
+header h2 {
+    color: white;
+    letter-spacing: 2px;
+}
 
-        h2 {
-            color: #1d5c82;
-            margin-top: 40px;
-            font-size: 24px;
-        }
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 500;
+}
 
-        p {
-            line-height: 1.8;
-            font-size: 17px;
-        }
+header nav a:hover {
+    opacity: 0.7;
+}
 
-        .intro {
-            text-align: center;
-            font-size: 18px;
-            margin-bottom: 40px;
-        }
+/* ===== HERO ===== */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(11,60,93,0.85), rgba(11,60,93,0.85)),
+    url('https://images.unsplash.com/photo-1581093588401-22b5ad2e1c07');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
 
-        .section {
-            margin-bottom: 30px;
-            padding: 20px;
-            border-left: 5px solid #0b3c5d;
-            background: #f4f8fb;
-            border-radius: 8px;
-        }
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
 
-        .section strong {
-            font-size: 18px;
-            color: #0b3c5d;
-        }
+.hero p {
+    font-size: 20px;
+    max-width: 800px;
+    margin: auto;
+}
 
-        .footer {
-            text-align: center;
-            margin-top: 50px;
-            font-size: 14px;
-            color: #777;
-        }
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 30px;
+    background: #ffffff;
+    color: #0b3c5d;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+}
 
-        @media (max-width: 768px) {
-            .card {
-                padding: 25px;
-            }
+.btn:hover {
+    background: #dfe8ef;
+}
 
-            h1 {
-                font-size: 28px;
-            }
-        }
-    </style>
+/* ===== SECTIONS ===== */
+section {
+    padding: 100px 10%;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 60px;
+    color: #0b3c5d;
+    font-size: 32px;
+}
+
+/* ===== CARDS ===== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    color: #1d5c82;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #0b3c5d;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+    .hero h1{
+        font-size: 32px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-<div class="wrapper">
-    <div class="card">
+<header>
+    <h2>GAMA</h2>
+    <nav>
+        <a href="#nosotros">Cómo trabajamos</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+</header>
 
-        <h1>¿Cómo trabajamos en GAMA?</h1>
-
-        <p class="intro">
-            En <strong>GAMA</strong> creemos que la infraestructura tecnológica debe construirse
-            desde el entendimiento profundo del negocio, no desde soluciones predefinidas.
-            Cada empresa tiene dinámicas, prioridades y ritmos distintos.  
-            Nuestra labor consiste en analizar, estructurar y diseñar sistemas que respalden
-            la operación presente y preparen el crecimiento futuro.
+<div class="hero">
+    <div>
+        <h1>Infraestructura Tecnológica Estratégica</h1>
+        <p>
+            Diseñamos, organizamos e implementamos sistemas tecnológicos
+            alineados al crecimiento real de tu empresa.
         </p>
-
-        <h2>Nuestro Enfoque Estratégico</h2>
-
-        <div class="section">
-            <strong>Análisis integral del negocio</strong>
-            <p>
-                Antes de cualquier implementación, estudiamos cómo opera la organización,
-                cómo fluyen los procesos internos, qué áreas son críticas y dónde se
-                encuentran los puntos de mayor impacto operativo. Esto nos permite diseñar
-                infraestructura alineada a la realidad empresarial y no simplemente instalar
-                equipos sin contexto.
-            </p>
-        </div>
-
-        <div class="section">
-            <strong>Identificación de prioridades y flujos de trabajo</strong>
-            <p>
-                Cada departamento tiene necesidades distintas en términos de conectividad,
-                seguridad y rendimiento. Evaluamos la importancia estratégica de cada área
-                para garantizar que la infraestructura respalde correctamente las funciones
-                esenciales del negocio.
-            </p>
-        </div>
-
-        <div class="section">
-            <strong>Diseño de soluciones flexibles y ordenadas</strong>
-            <p>
-                Diseñamos sistemas estructurados, organizados y documentados, evitando
-                improvisaciones. La infraestructura queda preparada para adaptarse a
-                reestructuraciones, crecimiento de personal o expansión física sin tener
-                que comenzar desde cero.
-            </p>
-        </div>
-
-        <div class="section">
-            <strong>Infraestructura preparada para el futuro</strong>
-            <p>
-                Implementamos soluciones escalables que permiten integrar nuevas tecnologías,
-                ampliar redes o mejorar equipos sin afectar la operación existente. Pensamos
-                en el mañana desde el primer día.
-            </p>
-        </div>
-
-        <h2>Servicios Especializados</h2>
-
-        <div class="section">
-            <strong>Diseño, instalación y mantenimiento de infraestructura tecnológica</strong>
-            <p>
-                Planificamos y ejecutamos proyectos completos de infraestructura,
-                asegurando orden, eficiencia energética, distribución estratégica
-                y cumplimiento de estándares técnicos.
-            </p>
-        </div>
-
-        <div class="section">
-            <strong>Implementación de redes de comunicación para datos, voz y video</strong>
-            <p>
-                Instalamos redes robustas que soportan transmisión de datos, telefonía IP
-                y sistemas de videovigilancia, garantizando estabilidad, velocidad y
-                continuidad operativa.
-            </p>
-        </div>
-
-        <div class="section">
-            <strong>Organización y optimización de sistemas de acceso y conectividad</strong>
-            <p>
-                Mejoramos la distribución de puntos de red, racks, canalizaciones
-                y sistemas de administración para reducir interferencias, pérdidas
-                de señal y desorden físico.
-            </p>
-        </div>
-
-        <div class="section">
-            <strong>Instalación y adecuación de equipos tecnológicos</strong>
-            <p>
-                Nos encargamos de la correcta instalación física y lógica de equipos
-                tecnológicos, garantizando funcionamiento óptimo y cumplimiento de
-                buenas prácticas técnicas.
-            </p>
-        </div>
-
-        <div class="section">
-            <strong>Mejora del rendimiento, orden y seguridad de las comunicaciones</strong>
-            <p>
-                Optimizamos redes existentes mediante reorganización estructural,
-                identificación de fallas, reducción de riesgos y fortalecimiento
-                de la seguridad en la transmisión de información.
-            </p>
-        </div>
-
-        <div class="section">
-            <strong>Soluciones escalables para el crecimiento futuro</strong>
-            <p>
-                Diseñamos infraestructuras preparadas para soportar expansión,
-                nuevas áreas, mayor número de usuarios y tecnologías emergentes
-                sin comprometer estabilidad ni rendimiento.
-            </p>
-        </div>
-
-        <div class="section">
-            <strong>Trabajos especializados en sistemas de cableado estructurado</strong>
-            <p>
-                Ejecutamos instalaciones bajo estándares técnicos reconocidos,
-                garantizando organización, etiquetado, certificación y documentación
-                adecuada del sistema de cableado. Esto asegura durabilidad,
-                mantenimiento sencillo y desempeño confiable.
-            </p>
-        </div>
-
-        <div class="footer">
-            © GAMA – Infraestructura Tecnológica Profesional
-        </div>
-
+        <a href="#contacto" class="btn">Solicitar Evaluación</a>
     </div>
 </div>
+
+<section id="nosotros">
+    <h2>¿Cómo trabajamos en GAMA?</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Análisis Integral del Negocio</h3>
+            <p>
+                Estudiamos procesos, ritmos de trabajo y áreas críticas
+                para diseñar infraestructura alineada a la operación real.
+            </p>
+        </div>
+        <div class="card">
+            <h3>Identificación de Prioridades</h3>
+            <p>
+                Evaluamos qué áreas requieren mayor rendimiento,
+                seguridad y estabilidad para optimizar recursos.
+            </p>
+        </div>
+        <div class="card">
+            <h3>Diseño Flexible y Escalable</h3>
+            <p>
+                Implementamos soluciones preparadas para crecimiento,
+                reorganización y nuevas tecnologías.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="servicios" style="background:#eef3f7;">
+    <h2>Servicios Especializados</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Infraestructura Tecnológica</h3>
+            <p>
+                Diseño, instalación y mantenimiento profesional
+                bajo estándares técnicos reconocidos.
+            </p>
+        </div>
+        <div class="card">
+            <h3>Redes de Datos, Voz y Video</h3>
+            <p>
+                Implementación de sistemas robustos para comunicación
+                estable y segura.
+            </p>
+        </div>
+        <div class="card">
+            <h3>Optimización y Seguridad</h3>
+            <p>
+                Mejora del rendimiento, orden físico y protección
+                de la información empresarial.
+            </p>
+        </div>
+        <div class="card">
+            <h3>Cableado Estructurado</h3>
+            <p>
+                Instalaciones certificadas, organizadas y documentadas
+                para máximo desempeño y durabilidad.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="contacto">
+    <h2>Preparados para impulsar tu infraestructura</h2>
+    <div style="text-align:center;">
+        <p style="font-size:18px;">
+            Contáctanos para una evaluación profesional
+            y lleva tu infraestructura al siguiente nivel.
+        </p>
+        <a href="mailto:contacto@gama.com" class="btn" style="margin-top:25px;">Contactar Ahora</a>
+    </div>
+</section>
+
+<footer>
+    © 2026 GAMA – Infraestructura Tecnológica Profesional
+</footer>
 
 </body>
 </html>
